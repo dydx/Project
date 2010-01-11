@@ -23,14 +23,14 @@ print "Done"
 
 puts ''
 
-print "Creating Git repo..."; puts ''
 if git_enabled == '--git'
-# Create a nice little Git repo for the project.
+  print "Creating Git repo..."; puts ''
+  # Create a nice little Git repo for the project.
   if !File.directory? '.git'
     system( 'git init && git add . && git commit -m "first commit" -a' )
   end
+  print "Done"
 end
-print "Done"
 
 puts ''
 
