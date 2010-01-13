@@ -10,25 +10,19 @@ that I have a hard time keeping track of; LOC, # of classes, etc ).
 Really simple to use ( if it isn't, then what's the point? ):
 
 $> project.rb MyApp --git
->> - generating ./MyApp
->> - initializing Git repo
->> - opening in Emacs (ha! not sure how this will play out)
+generating ./MyApp
+initializing Git repo
+opening in Emacs (ha! not sure how this will play out)
 
-after a good bit of hacking
+Then we have a metrics gathering facility, which is also simple:
 
-$> metrics.rb ./MyApp --git
->> - 2 Languages
->> - 11 Files
->> - 968 LOC
->> - 738 Comments
->> - 23 Classes
->> - 121 Class Methods
->> - 1384 Git Commits
->> - Date of First Commit: 1/9/2010
->> - Date of Last Commit: 1/9/2010
->> - Most Edited File: core_utils.rb (148 times)
+$> metrics.rb ./MyApp
+11 Files
+968 LOC
+738 Comments
+23 Classes
+121 Methods
+3 Modules
 
-In both of these, the `--git' flag tells it to use Git. All of my
-stuff is stored in Git, but other's might not be. I don't know any
-SCM software all that well (basic working view of Git is all I have),
-so support for stuff like SVN or Bazaar probably wont come from me.
+More metrics data options to come. I just wanted to get something
+that worked up.
