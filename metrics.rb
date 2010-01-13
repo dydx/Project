@@ -23,10 +23,6 @@ project_classes = 0
 project_methods = 0
 project_modules = 0
 
-# DEBUG
-p project_dir_contents
-# END-DEBUG
-
 # Let's gather some data!
 project_dir_contents.each do |file|
   project_files += 1
@@ -34,7 +30,7 @@ project_dir_contents.each do |file|
     f.each_line do |line|
       project_lines += 1
       # match a comment
-      if line.match( /^#+/ )
+      if line.match( /^\s*#+/ )
         project_comments += 1
       end
       # match a class definition
